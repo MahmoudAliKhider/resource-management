@@ -1,0 +1,135 @@
+<div class="container" dir="rtl">
+
+
+  <div class="head">
+    <h4>
+      حدد مواعيد العمل للمورد
+    </h4>
+    <p>
+      تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة / إزالة أوقات الراحة لإعداد ساعات
+      العمل.
+    </p>
+  </div>
+  <div class="body">
+    <div class="row">
+      <p-inputSwitch [(ngModel)]="Saturday"></p-inputSwitch>
+      <p>السبت</p>
+    </div>
+    <br>
+    <div class="row">
+      <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
+      <p>الاحد</p>
+      <div class="conTime">
+        <div class="time" *ngFor="let day of days; let i = index">
+          <div class="time-slot">
+            <div class="start">
+              <label>وقت البدء</label>
+              <p-calendar [(ngModel)]="day.start" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <div class="end">
+              <label>وقت الانتهاء</label>
+              <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+          </div>
+        </div>
+        <button class="addBtn" (click)="addTimeSlot()">+</button>
+      </div>
+
+
+    </div>
+
+    <div class="row">
+      <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
+      <p>الإثنين</p>
+      <div class="conTime">
+        <div class="time" *ngFor="let day of days; let i = index">
+          <div class="time-slot">
+            <div class="start">
+              <label>وقت البدء</label>
+              <p-calendar [(ngModel)]="day.start" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <div class="end">
+              <label>وقت الانتهاء</label>
+              <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+          </div>
+        </div>
+        <button class="addBtn" (click)="addTimeSlot()">+</button>
+      </div>
+
+
+    </div>
+    <div class="row">
+      <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
+      <p>الثلاثاء</p>
+      <div class="conTime">
+        <div class="time" *ngFor="let day of days; let i = index">
+          <div class="time-slot">
+            <div class="start">
+              <label>وقت البدء</label>
+              <p-calendar [(ngModel)]="day.start" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <div class="end">
+              <label>وقت الانتهاء</label>
+              <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+          </div>
+        </div>
+        <button class="addBtn" (click)="addTimeSlot()">+</button>
+      </div>
+
+
+    </div>
+    <div class="row">
+      <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
+      <p>الأربعاء</p>
+      <div class="conTime">
+        <div class="time" *ngFor="let day of days; let i = index">
+          <div class="time-slot">
+            <div class="start">
+              <label>وقت البدء</label>
+              <p-calendar [(ngModel)]="day.start" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <div class="end">
+              <label>وقت الانتهاء</label>
+              <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+          </div>
+        </div>
+        <button class="addBtn" (click)="addTimeSlot()">+</button>
+      </div>
+
+
+    </div>
+    <div class="row">
+      <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
+      <p>الخميس</p>
+      <div class="conTime">
+        <div class="time" *ngFor="let day of days; let i = index">
+          <div class="time-slot">
+            <div class="start">
+              <label>وقت البدء</label>
+              <p-calendar [(ngModel)]="day.start" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <div class="end">
+              <label>وقت الانتهاء</label>
+              <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
+            </div>
+            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+          </div>
+        </div>
+        <button class="addBtn" (click)="addTimeSlot()">+</button>
+      </div>
+
+
+    </div>
+
+    <div class="row">
+      <p-inputSwitch [(ngModel)]="Saturday"></p-inputSwitch>
+      <p>الجمعة</p>
+    </div>
+  </div>

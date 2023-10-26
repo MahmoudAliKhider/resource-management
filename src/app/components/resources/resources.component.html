@@ -1,0 +1,86 @@
+<div class="container">
+
+  <div class="left">
+    <div class="input-text">
+      <p> الموارد متاح الي</p>
+      <div class="p-inputgroup" dir="rtl">
+        <input type="number" pInputText placeholder="الرقم" />
+        <p-splitButton class="btn" [label]="selectedItemLabel" [model]="items"
+          styleClass="p-button-text p-button-secondary mr-2 mb-2"></p-splitButton>
+      </div>
+    </div>
+
+    <div class="mid" dir="rtl">
+      <p> وقت المورد </p>
+      <div class="op">
+        <p-radioButton name="option" value="1" [(ngModel)]="selectedOption"></p-radioButton>
+        <label for="option1">وقت الخدمة</label>
+
+        <p-radioButton name="option" value="2" [(ngModel)]="selectedOption"></p-radioButton>
+        <label for="option2"> الوقت الثابت</label>
+
+        <!-- <p-inputNumber class="nu" *ngIf="selectedOption === '2'" [(ngModel)]="inputValue" [showButtons]="true"
+          [buttonLayout]="'horizontal'" incrementButtonIcon="pi pi-plus" decrementButtonIcon="pi pi-minus"
+          decrementButtonClass="p-button-secondary" incrementButtonClass="p-button-secondary"
+          (onIncrement)="incrementValue()" (onDecrement)="decrementValue()" [min]="0"></p-inputNumber>
+         -->
+         <div class="dev" *ngIf="selectedOption === '2'" >
+          <button class="btn1" (click)="decrementValue()" >-</button>
+          <p>{{ inputValue }} دقيقة</p>
+          <button class="btn2" (click)="incrementValue()" >+</button>
+         </div>
+
+      </div>
+
+    </div>
+
+    <div class="bt" dir="rtl">
+      <p> الحجز المتعدد</p>
+      <div class="opt">
+        <p-radioButton name="option" value="1" [(ngModel)]="selectedOption1"></p-radioButton>
+        <label for="option1">
+          <i class="fas fa-user"></i> حجز واحد فقط
+        </label>
+
+        <p-radioButton name="option" value="2" [(ngModel)]="selectedOption1"></p-radioButton>
+        <label for="option2"> <i class="fas fa-users"></i> حجز اكثر من شخص لنفس الموعد</label>
+
+        <input pInputText type="number" *ngIf="selectedOption1 === '2'" placeholder="الحجز" />
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="right-con">
+    <div class="right">
+      <div class="input-text">
+        <p>اسم الموارد</p>
+        <input class="name" type="text" placeholder="ادخل الاسم" [(ngModel)]="userName" name="userName">
+      </div>
+
+      <div class="image-upload">
+        <input class="add" type="file" (change)="onFileSelected($event)" accept="image/*" id="imageInput" />
+        <label for="imageInput" class="upload-button"><img class="up" src="./assets/images/upload.png"
+            alt="k" /></label>
+        <div class="preview">
+          <img *ngIf="selectedImage" [src]="selectedImage" alt="Selected Image">
+        </div>
+      </div>
+
+      <div class="error-message" *ngIf="imageError">{{imageError}}</div>
+    </div>
+    <div class="right-down" dir="rtl">
+      <p>اختر نوع المورد</p>
+      <p-radioButton name="option" value="1" [(ngModel)]="selectedOptionType"></p-radioButton>
+      <label for="option1">
+        حجز خلال اليوم
+      </label>
+      <p-radioButton name="option" value="2" [(ngModel)]="selectedOptionType"></p-radioButton>
+      <label for="option2"> حجز مدة ( أكثر من يوم )</label>
+
+    </div>
+  </div>
+
+
+</div>

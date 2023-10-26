@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="left">
+    <button class="remove" (click)="delete()">
+      <mat-icon class="remove-icon">delete</mat-icon>
+      <p>حذف المورد</p>
+    </button>
+
+
+    <button class="save" (click)="save()"> حفظ التغيرات</button>
+<div class="sw">
+  <p-inputSwitch class="select" [(ngModel)]="checked"> </p-inputSwitch>
+  <p>مفعلة</p>
+</div>
+
+
+  </div>
+
+  <div class="right">
+    <span class="text">اضافة موارد جديدة</span>
+    <button mat-icon-button (click)="goBack()">
+      <mat-icon class="rotate-180">arrow_back</mat-icon>
+    </button>
+  </div>
+</div>
