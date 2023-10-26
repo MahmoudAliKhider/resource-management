@@ -12,7 +12,7 @@
   </div>
   <div class="body">
     <div class="row">
-      <p-inputSwitch [(ngModel)]="Saturday"></p-inputSwitch>
+      <p-inputSwitch [(ngModel)]="Saturday" [disabled]="true"></p-inputSwitch>
       <p>السبت</p>
     </div>
     <br>
@@ -43,7 +43,7 @@
       <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
       <p>الإثنين</p>
       <div class="conTime">
-        <div class="time" *ngFor="let day of days; let i = index">
+        <div class="time" *ngFor="let day of days1; let i = index">
           <div class="time-slot">
             <div class="start">
               <label>وقت البدء</label>
@@ -53,10 +53,10 @@
               <label>وقت الانتهاء</label>
               <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
             </div>
-            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+            <button class="removeBtn" (click)="removeTimeSlot1(i)">-</button>
           </div>
         </div>
-        <button class="addBtn" (click)="addTimeSlot()">+</button>
+        <button class="addBtn" (click)="addTimeSlot1()">+</button>
       </div>
 
 
@@ -65,7 +65,7 @@
       <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
       <p>الثلاثاء</p>
       <div class="conTime">
-        <div class="time" *ngFor="let day of days; let i = index">
+        <div class="time" *ngFor="let day of days2; let i = index">
           <div class="time-slot">
             <div class="start">
               <label>وقت البدء</label>
@@ -75,10 +75,10 @@
               <label>وقت الانتهاء</label>
               <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
             </div>
-            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+            <button class="removeBtn" (click)="removeTimeSlot2(i)">-</button>
           </div>
         </div>
-        <button class="addBtn" (click)="addTimeSlot()">+</button>
+        <button class="addBtn" (click)="addTimeSlot2()">+</button>
       </div>
 
 
@@ -87,7 +87,7 @@
       <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
       <p>الأربعاء</p>
       <div class="conTime">
-        <div class="time" *ngFor="let day of days; let i = index">
+        <div class="time" *ngFor="let day of days3; let i = index">
           <div class="time-slot">
             <div class="start">
               <label>وقت البدء</label>
@@ -97,10 +97,10 @@
               <label>وقت الانتهاء</label>
               <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
             </div>
-            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+            <button class="removeBtn" (click)="removeTimeSlot3(i)">-</button>
           </div>
         </div>
-        <button class="addBtn" (click)="addTimeSlot()">+</button>
+        <button class="addBtn" (click)="addTimeSlot3()">+</button>
       </div>
 
 
@@ -109,7 +109,7 @@
       <p-inputSwitch [(ngModel)]="Sunday"></p-inputSwitch>
       <p>الخميس</p>
       <div class="conTime">
-        <div class="time" *ngFor="let day of days; let i = index">
+        <div class="time" *ngFor="let day of days4; let i = index">
           <div class="time-slot">
             <div class="start">
               <label>وقت البدء</label>
@@ -119,17 +119,17 @@
               <label>وقت الانتهاء</label>
               <p-calendar [(ngModel)]="day.end" [showTime]="true" [showSeconds]="true"></p-calendar>
             </div>
-            <button class="removeBtn" (click)="removeTimeSlot(i)">-</button>
+            <button class="removeBtn" (click)="removeTimeSlot4(i)">-</button>
           </div>
         </div>
-        <button class="addBtn" (click)="addTimeSlot()">+</button>
+        <button class="addBtn" (click)="addTimeSlot4()">+</button>
       </div>
 
 
     </div>
 
     <div class="row">
-      <p-inputSwitch [(ngModel)]="Saturday"></p-inputSwitch>
+      <p-inputSwitch [(ngModel)]="Saturday" [disabled]="true"></p-inputSwitch>
       <p>الجمعة</p>
     </div>
   </div>
